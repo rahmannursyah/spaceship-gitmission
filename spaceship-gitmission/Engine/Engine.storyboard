@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Engine View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="engineStoryboard" id="Y6W-OH-hqX" customClass="EngineViewController" customModule="spaceship_gitmission" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here is the engine room" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRT-hS-iRW">
+                                <rect key="frame" x="35.5" y="430" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's directly have access to" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpF-Xn-2F3">
+                                <rect key="frame" x="35.5" y="474" width="343" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWG-h2-zLm">
+                                <rect key="frame" x="35.5" y="518.5" width="155" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Control room            &gt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="navigateToControl:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="clD-Ig-Jb0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdB-wF-bei">
+                                <rect key="frame" x="35.5" y="575.5" width="158" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Cockpit room            &gt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="navigateToCockpit:" destination="Rzp-Nx-PPI" eventType="touchUpInside" id="Irt-5S-HED"/>
+                                    <action selector="navigateToCockpit:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="x9a-Yz-8s5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.039215686270000001" green="0.015686274510000001" blue="0.24161353990000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GRT-hS-iRW" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="C7b-8B-nhc"/>
+                            <constraint firstItem="GRT-hS-iRW" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="N51-3R-WgI"/>
+                            <constraint firstItem="fpF-Xn-2F3" firstAttribute="leading" secondItem="GRT-hS-iRW" secondAttribute="leading" id="Wgt-FS-cNj"/>
+                            <constraint firstItem="EWG-h2-zLm" firstAttribute="top" secondItem="fpF-Xn-2F3" secondAttribute="bottom" constant="25" id="XGx-iv-dcH"/>
+                            <constraint firstItem="fpF-Xn-2F3" firstAttribute="top" secondItem="GRT-hS-iRW" secondAttribute="bottom" constant="8" symbolic="YES" id="cnH-LD-bse"/>
+                            <constraint firstItem="fpF-Xn-2F3" firstAttribute="trailing" secondItem="GRT-hS-iRW" secondAttribute="trailing" id="csW-Bm-6qu"/>
+                            <constraint firstItem="sdB-wF-bei" firstAttribute="top" secondItem="EWG-h2-zLm" secondAttribute="bottom" constant="25" id="pLQ-jt-FfH"/>
+                            <constraint firstItem="EWG-h2-zLm" firstAttribute="leading" secondItem="fpF-Xn-2F3" secondAttribute="leading" id="v0C-d0-bKW"/>
+                            <constraint firstItem="sdB-wF-bei" firstAttribute="leading" secondItem="EWG-h2-zLm" secondAttribute="leading" id="vFq-DL-K3v"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Rzp-Nx-PPI" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="114"/>
+        </scene>
+    </scenes>
+</document>
